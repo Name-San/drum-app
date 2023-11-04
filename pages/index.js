@@ -1,4 +1,5 @@
 import {useState, useRef, useEffect} from 'react';
+import Head from 'next/head';
 
 //Data
 const kits = {
@@ -274,6 +275,10 @@ export default function Main() {
 
   return (
   <div id="root">
+    <Head>
+      <title>Drum Maker App</title>
+      <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+    </Head>
     <div className='inner-container' id='drum-machine'>
       <PadBank 
         kit={kits[currBank]} 
